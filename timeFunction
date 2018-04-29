@@ -1,0 +1,21 @@
+
+#include <chrono>
+
+using namespace std;
+
+int main()
+{
+    using ns = chrono::nanoseconds;
+    using get_time = chrono::steady_clock;
+
+    auto start = get_time::now();
+    //...
+    auto end = get_time::now();
+    auto diff = end - start;
+    cout << "Elapsed time is : " << chrono::duration_cast<ns>(diff).count() << " ns " << endl;
+    return 0;
+}
+
+https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md
+
+https://codeshare.io/5RAqqB
